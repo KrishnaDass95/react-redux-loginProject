@@ -22,9 +22,11 @@ const Signup = () => {
 
         if(!userName || !email || !password || !confirmPassword){
             alert('fields are empty');
+            return;
         }
         if(confirmPassword != password){
             alert('password does not match confirm password');
+            return;
         }
 
         // dispatch the info to reducer store
