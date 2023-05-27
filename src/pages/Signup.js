@@ -4,16 +4,6 @@ const Signup = () => {
 
     return(
         <>
-        <nav>
-            <div className="header">
-                Header
-            </div>
-            <div className="header-options">
-                <a href="#">Signup</a>
-                <a href="#">Profile</a>
-            </div>
-        </nav>
-
         <h1>Signup</h1>
         <input 
         type="text"
