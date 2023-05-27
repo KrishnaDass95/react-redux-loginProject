@@ -2,11 +2,11 @@
 
 export const Profile = () => {
     return (
-        <div>
+        <div className="container">
             <h1>Profiles page</h1>
-            <h1>Full Name:</h1>
-            <h1>Email: </h1>
-            <h1>Password: </h1>
+            <h2>Full Name:</h2>
+            <h2>Email: </h2>
+            <h2>Password: </h2>
             <button>Logout</button>
         </div>
     )
