@@ -4,6 +4,7 @@ const Signup = () => {
 
     return(
         <>
+        <div className="container">
         <h1>Signup</h1>
         <input 
         type="text"
@@ -26,6 +27,8 @@ const Signup = () => {
             <p></p>
         </div>
         <button>Signup</button>
+        </div>
+
         </>
     )
 

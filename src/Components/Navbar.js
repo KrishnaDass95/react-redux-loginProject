@@ -2,14 +2,23 @@ import { Link } from "react-router-dom"
 
  export const NavBar = () => {
     return (
-        <nav>
+        <nav className="nav">
         <div className="header">
-            Header
+            <h1>Website Header</h1>
         </div>
-        <div className="header-options">
+        <ul>
+            <li>
+            <Link className="navigation" to="/">Signup</Link>
+            </li>
+            <li>
+            <Link className="navigation" to="/profile">Profile</Link>
+            </li>
+        </ul>
+
+        {/* <div className="header-options">
             <Link to="/">Signup</Link>
             <Link to="/profile">Profile</Link>
-        </div>
+        </div> */}
     </nav>
     )
 }

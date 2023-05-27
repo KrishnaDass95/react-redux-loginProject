@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    background-color: black;
+    color: white;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.nav .navigation{
+    color: white;
+}
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+input{
+    width: 50%;
+    background-color: black;
+    color: white;
+}
