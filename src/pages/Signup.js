@@ -1,33 +1,24 @@
 import { useSelector, useDispatch } from "react-redux";
-import { useRef } from 'react';
+import { LOGIN } from "../actions/actionsType";
+import { useState } from 'react';
 
 const Signup = () => {
 
     const loginState = useSelector(state => state);
     const dispatch = useDispatch();
-
-    const nameRef = useRef("");
-    const emailRef = useRef("");
-    const passwordRef = useRef("");
-    const confirmPasswordRef = useRef("");
+    const [userName, setUserName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
 
     function signUp(){
-        const name = nameRef.current;
-        const email = emailRef.current;
-        const password = passwordRef.current;
-        const confirmPassword = confirmPasswordRef.current;
 
-        if (!name || !email || !password || !confirmPassword) {
-            alert("Please enter all the required fields");
-            return;
+        if(!userName || !email || !password || !confirmPassword){
+            alert('fields are empty');
         }
-
-        if (password !== confirmPassword) {
-            alert("The passwords do not match");
-            return;
+        if(confirmPassword != password){
+            alert('password does not match confirm password');
         }
-
-
 
     }
 
@@ -38,26 +29,30 @@ const Signup = () => {
         <input 
         type="text"
         placeholder="Full Name"
-        ref={nameRef}
+        onChange={(e) => setUserName(e.target.value)}
         />
+
         <input 
         type="text"
         placeholder="Email"
-        ref={emailRef}
+        onChange={(e) => setEmail(e.target.value)}
         />
+
         <input 
         type="password"
         placeholder="Password"
-        ref={passwordRef}
+        onChange={(e) => setPassword(e.target.value)}
         />
         <input 
         type="password"
         placeholder="Confirm Password"
-        ref={confirmPasswordRef}
+        onChange={(e) => setConfirmPassword(e.target.value)}
         />
+
         <div className="login-message">
-            {/* enter login message here */}
-            <p></p>
+            <p>
+                {/* error message */}
+            </p>
         </div>
         <button onClick={signUp}>Signup</button>
         </div>
