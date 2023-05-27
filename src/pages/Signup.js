@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { LOGIN } from "../actions/actionsType";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Signup = () => {
 
@@ -11,6 +11,10 @@ const Signup = () => {
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
 
+    useEffect(() => {
+        console.log(loginState);
+      }, [loginState]);
+
     function signUp(){
 
         if(!userName || !email || !password || !confirmPassword){
@@ -19,6 +23,17 @@ const Signup = () => {
         if(confirmPassword != password){
             alert('password does not match confirm password');
         }
+
+        // dispatch the info to reducer store
+        dispatch({
+            type: LOGIN,
+            payload: {
+                name: userName,
+                email,
+                password
+            }
+        })
+        console.log(loginState);
 
     }
 

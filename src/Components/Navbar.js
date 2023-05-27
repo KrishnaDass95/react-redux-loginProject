@@ -14,11 +14,6 @@ import { Link } from "react-router-dom"
             <Link className="navigation" to="/profile">Profile</Link>
             </li>
         </ul>
-
-        {/* <div className="header-options">
-            <Link to="/">Signup</Link>
-            <Link to="/profile">Profile</Link>
-        </div> */}
     </nav>
     )
 }
