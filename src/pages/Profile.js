@@ -3,7 +3,11 @@
 export const Profile = () => {
     return (
         <div>
-            This is the profiles page
+            <h1>Profiles page</h1>
+            <h1>Full Name:</h1>
+            <h1>Email: </h1>
+            <h1>Password: </h1>
+            <button>Logout</button>
         </div>
     )
 }
