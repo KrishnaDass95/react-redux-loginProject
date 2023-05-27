@@ -1,7 +1,7 @@
 import React from "react";
 import Signup from "./pages/Signup";
 import { Profile } from "./pages/Profile";
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useHistory } from 'react-router-dom'
 import { NavBar } from "./Components/Navbar";
 import { Provider } from "react-redux";
 import store from "./store";

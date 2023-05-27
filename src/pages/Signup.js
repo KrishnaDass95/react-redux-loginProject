@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { LOGIN } from "../actions/actionsType";
 import { useState, useEffect } from 'react';
@@ -10,6 +11,8 @@ const Signup = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
+    const navigate = useNavigate();
+
 
     useEffect(() => {
         console.log(loginState);
@@ -33,7 +36,7 @@ const Signup = () => {
                 password
             }
         })
-        console.log(loginState);
+        navigate("/profile");
 
     }
 
