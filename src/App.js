@@ -1,7 +1,7 @@
 import React from "react";
 import Signup from "./pages/Signup";
 import { Profile } from "./pages/Profile";
-import {Routes, Route} from 'react-router-dom'
+import { Routes, Route, Link } from 'react-router-dom'
 
 const App = () => {
 
@@ -12,8 +12,8 @@ const App = () => {
                 Header
             </div>
             <div className="header-options">
-                <a href="#">Signup</a>
-                <a href="#">Profile</a>
+                <Link to="/">Signup</Link>
+                <Link to="/profile">Profile</Link>
             </div>
         </nav>
         <Routes>
